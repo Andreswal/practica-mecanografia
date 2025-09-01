@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica de Mecanografía</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="imagenes/ico.ico">
+</head>
+<body>
+    <h1 class="titulo-con-icono">
+        <img src="imagenes/ico.png" alt="Icono de la aplicación" class="icono-titulo">
+        Prueba de Mecanografía
+    </h1>
+
+    <div class="contenedor-principal">
+        <div class="contenedor">
+            <div>
+                <p><strong>Pega tu Texto aquí:</strong></p>
+                <textarea id="original" placeholder="Pega tu texto aquí..."></textarea>
+            </div>
+
+            <div>
+                <p><strong>práctica:</strong></p>
+                <textarea id="entrada" placeholder="Empieza a escribir aquí..." disabled></textarea>
+            </div>
+        </div>
+
+        <div class="control-panel">
+            <div class="modo-cronometro">
+                <label for="opciones-tiempo">Seleccionar tiempo:</label>
+                <select id="opciones-tiempo">
+                    <option value="0">Modo Cronómetro (infinito)</option>
+                    <option value="1">1 Minuto</option>
+                    <option value="3">3 Minutos</option>
+                    <option value="4">4 Minutos</option>
+                    <option value="5">5 Minutos</option>
+                    <option value="7">7 Minutos</option>
+                </select>
+            </div>
+
+            <div class="botones">
+                <button id="iniciar">▶ Iniciar</button>
+                <button id="pausar" disabled>⏸ Pausar</button>
+                <button id="reiniciar" disabled>🔄 Reiniciar</button>
+            </div>
+
+            <div class="info" id="tiempo">⏱ Tiempo: 0:00</div>
+            <div class="info" id="palabras">📖 Palabras: 0/0 | ✅ Correctas: 0</div>
+            <div class="info" id="progreso">💨 PPM: 0 | 🎯 Precisión: 0%</div>
+            <div id="resultado"></div>
+
+            <div class="llamado-a-la-accion">
+                <p>¿Te sirvió mi página?</p>
+                <p>¡Invítame un cafecito para seguir mejorando!☕</p>
+                <a href="https://cafecito.app/mecanografia" target="_blank" class="boton-cafecito">Invitar un cafecito</a>
+            </div>
+        </div>
+    </div>
+
+</div> <div class="instrucciones">
+    <h2>¿Cómo funciona?</h2>
+    <ol>
+        <li><p><strong>Pega tu texto.</strong> En el cuadro de la izquierda, copia y pega el texto que deseas practicar.</p></li>
+        <li><p><strong>Configura el tiempo.</strong> Si quieres un tiempo limitado, selecciona una de las opciones del cronómetro.</p></li>
+        <li><p><strong>¡A escribir!</strong> Cuando estés listo, haz clic en "Iniciar" y comienza a escribir en el cuadro de la derecha.</p></li>
+        <li><p><strong>Mira tus resultados.</strong> Al terminar, verás tu velocidad (PPM) y tu precisión en la pantalla.</p></li>
+    </ol>
+</div>
+
+    <footer>
+        <p>&copy; 2025 Práctica de Mecanografía | Creado por Andrés Walter Romero</p>
+        <p>Contacto: <a href="https://www.linkedin.com/in/andrés-walter-romero-409557376" target="_blank">LinkedIn</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
