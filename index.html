@@ -4,52 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Práctica de Mecanografía</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="imagenes/ico.ico">
 </head>
 <body>
-    <h1 class="titulo-con-icono">
-        <img src="imagenes/ico.png" alt="Icono de la aplicación" class="icono-titulo">
-        Prueba de Mecanografía
-    </h1>
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">
+                <div class="logo-mark"><img src="imagenes/ico.png" alt="" class="icono-titulo"></div>
+                <div>
+                    <div class="logo-text">PRÁCTICA DE MECANOGRAFÍA</div>
+                    <div class="logo-sub">Velocidad · Precisión · Entrenamiento</div>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <main class="main">
     <div class="contenedor-principal">
         <div class="contenedor">
-            <div>
-                <p><strong>Pega tu texto aquí:</strong></p>
+            <div class="panel">
+                <div class="panel-title">01 · Texto original</div>
                 <textarea id="original" placeholder="Pega tu texto aquí..."></textarea>
                 <div id="original-resaltado" class="texto-resaltado oculto" aria-hidden="true"></div>
             </div>
 
-            <div>
-                <p><strong>Práctica:</strong></p>
+            <div class="panel acc-magenta">
+                <div class="panel-title">02 · Tu práctica</div>
                 <textarea id="entrada" placeholder="Empieza a escribir aquí..." disabled></textarea>
             </div>
         </div>
 
         <div class="control-panel">
-            <div class="modo-cronometro">
-                <label for="opciones-tiempo">Seleccionar tiempo:</label>
-                <select id="opciones-tiempo">
-                    <option value="0">Modo Cronómetro (infinito)</option>
-                    <option value="1">1 Minuto</option>
-                    <option value="3">3 Minutos</option>
-                    <option value="4">4 Minutos</option>
-                    <option value="5">5 Minutos</option>
-                    <option value="7">7 Minutos</option>
-                </select>
+            <div class="panel acc-amber">
+                <div class="panel-title">Configuración</div>
+                <div class="modo-cronometro">
+                    <label for="opciones-tiempo">Seleccionar tiempo</label>
+                    <select id="opciones-tiempo">
+                        <option value="0">Modo Cronómetro (infinito)</option>
+                        <option value="1">1 Minuto</option>
+                        <option value="3">3 Minutos</option>
+                        <option value="4">4 Minutos</option>
+                        <option value="5">5 Minutos</option>
+                        <option value="7">7 Minutos</option>
+                    </select>
+                </div>
+
+                <div class="botones">
+                    <button id="iniciar">▶ Iniciar</button>
+                    <button id="pausar" disabled>⏸ Pausar</button>
+                    <button id="reiniciar" disabled>🔄 Reiniciar</button>
+                </div>
             </div>
 
-            <div class="botones">
-                <button id="iniciar">▶ Iniciar</button>
-                <button id="pausar" disabled>⏸ Pausar</button>
-                <button id="reiniciar" disabled>🔄 Reiniciar</button>
+            <div class="panel">
+                <div class="panel-title">Progreso</div>
+                <div class="info" id="tiempo">⏱ Tiempo: 0:00</div>
+                <div class="info" id="palabras">📖 Palabras: 0/0 | ✅ Correctas: 0</div>
+                <div class="info" id="progreso">💨 PPM: 0 | 🎯 Precisión: 0%</div>
+                <div id="resultado"></div>
             </div>
-
-            <div class="info" id="tiempo">⏱ Tiempo: 0:00</div>
-            <div class="info" id="palabras">📖 Palabras: 0/0 | ✅ Correctas: 0</div>
-            <div class="info" id="progreso">💨 PPM: 0 | 🎯 Precisión: 0%</div>
-            <div id="resultado"></div>
 
             <div class="llamado-a-la-accion">
                 <p>¿Te sirvió mi página?</p>
@@ -58,9 +75,10 @@
             </div>
         </div>
     </div>
+    </main>
 
-<div class="instrucciones">
-    <h2>¿Cómo funciona?</h2>
+<div class="instrucciones panel acc-amber">
+    <div class="panel-title">¿Cómo funciona?</div>
     <ol>
         <li><p><strong>Pega tu texto.</strong> En el cuadro de la izquierda, copia y pega el texto que deseas practicar.</p></li>
         <li><p><strong>Configura el tiempo.</strong> Si quieres un tiempo limitado, selecciona una de las opciones del cronómetro.</p></li>
@@ -69,8 +87,8 @@
     </ol>
 </div>
 
-<div class="comentarios-seccion">
-    <h2>Déjanos tus comentarios</h2>
+<div class="comentarios-seccion panel acc-magenta">
+    <div class="panel-title">Déjanos tus comentarios</div>
     <p>¿Tienes alguna sugerencia o encontraste un error? ¡Me encantaría leerte!</p>
     <form action="https://formspree.io/f/xdklpdjo" method="POST" class="formulario-comentarios">
         <div class="form-grupo">
